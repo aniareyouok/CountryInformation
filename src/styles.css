@@ -1,5 +1,5 @@
 * {
-    width: content-box;
+    box-sizing: content-box;
 }
 
 body {
@@ -16,13 +16,44 @@ h1 {
     align-items: center;
 }
 
-#map {
-    width: 40%;
-}
-
 .worldmap {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+#map {
+    width: 40%;
+}
+
+#country-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#flag {
+    width:10%;
+    height: 100px;
+    background-color: white;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 0;
+    padding: 1rem;
+}
+
+#info {
+    width: 25%;
+    height: 100px;
+    background-color: darkorange;
+    font-family: "Franklin Gothic Book", serif;
+    font-size: small;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 1rem;
+    padding: 1rem;
 }
