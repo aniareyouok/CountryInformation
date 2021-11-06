@@ -1,3 +1,28 @@
+* {
+    width: content-box;
+}
+
 body {
     background-color: darkred;
+}
+
+h1 {
+    font-family: "Franklin Gothic Book", serif;
+    font-weight: bold;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    width: 40%;
+}
+
+.worldmap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
