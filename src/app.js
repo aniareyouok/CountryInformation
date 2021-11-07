@@ -9,6 +9,10 @@ async function fetchData() {
         //retrieving array with country information of all countries
             const result = await axios.get('https://restcountries.com/v2/all')
 
+        //sorting the array on population size from small to big
+        result.data.sort((a, b) => {
+            return a.population - b.population;
+        })
             //mapping through array of all countries
             const countryList = result.data.map((country) => {
 
