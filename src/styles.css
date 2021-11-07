@@ -1,5 +1,5 @@
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -27,33 +27,37 @@ h1 {
     width: 40%;
 }
 
-#country-box {
+.country-box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 40%;
+    margin: 5px auto;
 }
 
-#flag {
-    width:10%;
-    height: 100px;
-    background-color: white;
-    margin-top: 1rem;
-    margin-bottom: 0;
-    margin-left: 1rem;
-    margin-right: 0;
-    padding: 1rem;
+.country {
+    margin-bottom: 3px;
 }
 
-#info {
-    width: 25%;
-    height: 100px;
+.country img {
+    width: 6%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.info {
+    width: calc(94% - 5px);
     background-color: darkorange;
     font-family: "Franklin Gothic Book", serif;
     font-size: small;
-    margin-top: 1rem;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 1rem;
-    padding: 1rem;
+    margin: 0 0 0 5px;
+    padding: 5px;
+    float: left;
+}
+
+.info:hover {
+    background-color: orange;
 }
