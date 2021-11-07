@@ -1,3 +1,4 @@
+/*by using border-box, the padding is included in the width*/
 * {
     box-sizing: border-box;
 }
@@ -27,6 +28,7 @@ h1 {
     width: 40%;
 }
 
+/*container for fetchData-function in main.js*/
 .country-box {
     display: flex;
     flex-direction: column;
@@ -36,6 +38,7 @@ h1 {
     margin: 5px auto;
 }
 
+/*div created for each country*/
 .country {
     margin-bottom: 3px;
 }
@@ -48,7 +51,7 @@ h1 {
     float: left;
 }
 
-.info {
+.country p {
     width: calc(94% - 5px);
     background-color: darkorange;
     font-family: "Franklin Gothic Book", serif;
@@ -58,6 +61,7 @@ h1 {
     float: left;
 }
 
+/*just being fancy*/
 .info:hover {
     background-color: orange;
 }
