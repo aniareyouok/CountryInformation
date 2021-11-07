@@ -67,18 +67,23 @@ h1 {
 .country p:hover {
     background-color: orange;
 }
+
 .country .Africa:hover {
     background-color: cornflowerblue;
 }
+
 .country .Americas:hover {
     background-color: darkseagreen;
 }
+
 .country .Asia:hover {
     background-color: red;
 }
+
 .country .Europe:hover {
     background-color: yellow;
 }
+
 .country .Oceania:hover {
     background-color: mediumpurple;
 }
