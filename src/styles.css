@@ -41,6 +41,7 @@ h1 {
 /*div created for each country*/
 .country {
     margin-bottom: 3px;
+    width: 100%;
 }
 
 .country img {
@@ -58,10 +59,27 @@ h1 {
     font-size: small;
     margin: 0 0 0 5px;
     padding: 5px;
-    float: left;
+    float: right;
 }
 
-/*just being fancy*/
-.info:hover {
+/*when hoovering over a country the background-colour is corresponding with the continent*/
+/*default color is orange*/
+.country p:hover {
     background-color: orange;
 }
+.country .Africa:hover {
+    background-color: cornflowerblue;
+}
+.country .Americas:hover {
+    background-color: darkseagreen;
+}
+.country .Asia:hover {
+    background-color: red;
+}
+.country .Europe:hover {
+    background-color: yellow;
+}
+.country .Oceania:hover {
+    background-color: mediumpurple;
+}
+
