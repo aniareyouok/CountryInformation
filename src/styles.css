@@ -32,9 +32,10 @@ h1 {
 .country-box {
     list-style: none;
     column-count: 3;
-    border-style: solid; size: 1px; color: whitesmoke;
+    border: solid 2px whitesmoke;
+    background-color: #fafcfd;
     width: 80%;
-    margin: 0 100px 0px 100px;
+    margin: 0 auto;
     padding: 25px;
 }
 
@@ -57,7 +58,6 @@ h1 {
     color: silver;
     margin: 0;
     padding: 0;
-    float: bottom;
 }
 
 .country .Africa {
@@ -84,8 +84,8 @@ h1 {
     font-family: "Franklin Gothic Book", sans-serif;
     font-size: small;
     color: black;
-    margin-top: 5px;
+    margin-top: 0;
     margin-bottom: 15px;
-    padding: 0px;
+    padding: 0;
 }
 
