@@ -36,6 +36,7 @@ async function fetchData() {
             //creating a <p> element and adding name of country and population-size
             //to <p> and putting <p> into listItem
             const countryP = document.createElement("p");
+            countryP.setAttribute("class", "countryP");
             countryP.textContent = `${country.name} has a population of ${country.population} people.`;
             listItem.appendChild(countryP)
 

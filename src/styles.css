@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: darkred;
+    background-color: white;
 }
 
 h1 {
@@ -28,19 +28,15 @@ h1 {
     width: 40%;
 }
 
-/*container for fetchData-function in main.js*/
+/*ul container for fetchData-function in main.js*/
 .country-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
+    column-count: 3;
+    width: 100%;
     margin: 5px auto;
 }
 
-/*div created for each country*/
+/*list item created for each country*/
 .country {
-    margin-bottom: 3px;
     width: 100%;
 }
 
@@ -52,39 +48,33 @@ h1 {
     float: left;
 }
 
-.country p {
-    width: calc(94% - 5px);
-    background-color: darkorange;
+.country h3 {
     font-family: "Franklin Gothic Book", serif;
-    font-size: small;
-    margin: 0 0 0 5px;
-    padding: 5px;
-    float: right;
 }
 
-/*when hoovering over a country the background-colour is corresponding with the continent*/
+/*font-colour is corresponding with the continent*/
 /*default color is orange*/
-.country p:hover {
-    background-color: orange;
+.country h3:hover {
+    color: orange;
 }
 
 .country .Africa:hover {
-    background-color: cornflowerblue;
+    color: cornflowerblue;
 }
 
 .country .Americas:hover {
-    background-color: darkseagreen;
+    color: darkseagreen;
 }
 
 .country .Asia:hover {
-    background-color: red;
+    color: red;
 }
 
 .country .Europe:hover {
-    background-color: yellow;
+    color: yellow;
 }
 
 .country .Oceania:hover {
-    background-color: mediumpurple;
+    color: mediumpurple;
 }
 
