@@ -30,6 +30,7 @@ h1 {
 
 /*ul container for fetchData-function in main.js*/
 .country-box {
+    list-style: none;
     column-count: 3;
     width: 100%;
     margin: 5px auto;
@@ -41,40 +42,46 @@ h1 {
 }
 
 .country img {
-    width: 6%;
+    width: 35px;
     height: auto;
-    margin: 0;
+    margin: 0 0 0 0;
     padding: 0;
     float: left;
 }
-
-.country h3 {
-    font-family: "Franklin Gothic Book", serif;
-}
-
 /*font-colour is corresponding with the continent*/
 /*default color is orange*/
-.country h3:hover {
+.country h3 {
+    font-family: "Franklin Gothic Book", serif;
     color: orange;
+    margin: 0;
+    padding: 0;
 }
 
-.country .Africa:hover {
+.country .Africa {
     color: cornflowerblue;
 }
 
-.country .Americas:hover {
+.country .Americas {
     color: darkseagreen;
 }
 
-.country .Asia:hover {
+.country .Asia {
     color: red;
 }
 
-.country .Europe:hover {
+.country .Europe{
     color: yellow;
 }
 
-.country .Oceania:hover {
+.country .Oceania{
     color: mediumpurple;
+}
+
+.countryP {
+    color: black;
+    margin-top: 5px;
+    margin-left: 0px;
+    padding: 0px;
+
 }
 
