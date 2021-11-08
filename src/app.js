@@ -16,29 +16,31 @@ async function fetchData() {
         //mapping through array of all countries
         const countryList = result.data.map((country) => {
 
-            //for each country creating a div element called country
-            const countryDiv = document.createElement("div");
-            countryDiv.setAttribute("class", "country")
+            //for each country creating a list item called listItem
+            const listItem = document.createElement("li");
+            listItem.setAttribute("class", "country")
 
-            //within each div an img element showing the corresponding flag
+            //within each li an img element showing the corresponding flag
             const flagImg = document.createElement("img");
             flagImg.setAttribute("src", country.flag)
             flagImg.setAttribute("alt", `Flag of ${country.name}`);
-            countryDiv.appendChild(flagImg);
+            listItem.appendChild(flagImg);
 
-            //a <p> is added to the country div
-            const infoP = document.createElement("p");
+            //a <h3> is created with a class name same as corresponding region
+            //adding the name of the country as value and putting this h3 item into list item
+            const countryName = document.createElement("h3");
+            countryName.setAttribute("class", country.region)
+            countryName.textContent = country.name;
+            listItem.appendChild(countryName);
 
-            //class name for <p> is the same as corresponding region
-            infoP.setAttribute("class", country.region)
+            //creating a <p> element and adding name of country and population-size
+            //to <p> and putting <p> into listItem
+            const countryP = document.createElement("p");
+            countryP.textContent = `${country.name} has a population of ${country.population} people.`;
+            listItem.appendChild(countryP)
 
-            //adding name of country and population-size to <p> and
-            //putting <p> into country div
-            infoP.textContent = `${country.name} has a population of ${country.population} people.`;
-            countryDiv.appendChild(infoP)
-
-            //each mapping wil place a country div in the html container called country-box
-            return document.getElementById("country-box").appendChild(countryDiv);
+            //each mapping wil place a list item in the html container called country-box
+            return document.getElementById("country-box").appendChild(listItem);
 
         });
         return countryList
