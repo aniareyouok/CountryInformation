@@ -25,15 +25,17 @@ h1 {
 }
 
 #map {
-    width: 40%;
+    width: 80%;
 }
 
 /*ul container for fetchData-function in main.js*/
 .country-box {
     list-style: none;
     column-count: 3;
-    width: 100%;
-    margin: 5px auto;
+    border-style: solid; size: 1px; color: whitesmoke;
+    width: 80%;
+    margin: 0 100px 0px 100px;
+    padding: 25px;
 }
 
 /*list item created for each country*/
@@ -42,9 +44,9 @@ h1 {
 }
 
 .country img {
-    width: 35px;
+    width: 25px;
     height: auto;
-    margin: 0 0 0 0;
+    margin: 0 10px 0 0;
     padding: 0;
     float: left;
 }
@@ -52,36 +54,38 @@ h1 {
 /*default color is orange*/
 .country h3 {
     font-family: "Franklin Gothic Book", serif;
-    color: orange;
+    color: silver;
     margin: 0;
     padding: 0;
+    float: bottom;
 }
 
 .country .Africa {
-    color: cornflowerblue;
+    color: royalblue;
 }
 
 .country .Americas {
-    color: darkseagreen;
+    color: #62c162;
 }
 
 .country .Asia {
-    color: red;
+    color: #bb0404;
 }
 
 .country .Europe{
-    color: yellow;
+    color: #d9d90f;
 }
 
 .country .Oceania{
-    color: mediumpurple;
+    color: purple;
 }
 
 .countryP {
+    font-family: "Franklin Gothic Book", sans-serif;
+    font-size: small;
     color: black;
     margin-top: 5px;
-    margin-left: 0px;
+    margin-bottom: 15px;
     padding: 0px;
-
 }
 
