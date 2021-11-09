@@ -8,13 +8,16 @@
 <body>
 
 <!--Title-->
-<h1>Let's search some countries!</h1>
+<h1>Country search</h1>
 
 <!--Image of the planet earth-->
-<img class="earth" id="image_earth" alt="image of the planet earth" src="assets/earth.jpg">
+<img class="earth" id="image_earth" alt="image of the planet earth" src="assets/earth.png">
 
-<!--container for search field in search.js-->
-<div class="search" id="search_container"></div>
+<!--container for search field and search button-->
+<div class="search" id="search_container">
+    <input type="text" size="30px" alt="search field for country name" id="search_field">
+    <button type="submit" id="search_button">Search!</button>
+</div>
 
 <!--outcome search = country information-->
 <div class="outcome" id="outcome_search"></div>

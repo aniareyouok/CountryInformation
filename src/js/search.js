@@ -20,21 +20,3 @@ async function searchCountry() {
 
 searchCountry();
 
-function createSearchField() {
-    //create searchField and add to search_container in search.html
-    const searchField = document.createElement("input");
-    searchField.setAttribute("id", "search_field");
-    document.getElementById("search_container").appendChild(searchField);
-
-    //create searchButton and add to search_container in search.html
-    const searchButton = document.createElement("button");
-    searchButton.setAttribute("id", "search_button");
-    document.getElementById("search_container").appendChild(searchButton);
-
-    //add eventlistener
-    searchButton.addEventListener("click", () => {
-        searchCountry(search);
-    })
-}
-
-createSearchField();

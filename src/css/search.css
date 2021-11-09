@@ -1,7 +1,29 @@
+/*by using border-box, the padding is included in the width*/
+* {
+    box-sizing: border-box;
+}
 
+body {
+    background-color: white;
+}
+
+h1 {
+    font-family: "Franklin Gothic Book", serif;
+    font-weight: bold;
+    color: orangered;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 .earth {
-    width: 40%;
+    width: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .search {
@@ -9,5 +31,27 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 40%;
+}
+
+.search input {
+    border-color: #62c162;
+    border-radius: 4px 0 0 4px;
+
+
+}
+
+.search button {
+    border-color: #62c162;
+    border-radius: 0 4px 4px 0;
+    background-color: #62c162;
+    font-weight: bold;
+
+}
+
+.outcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
 }
