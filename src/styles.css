@@ -28,6 +28,14 @@ h1 {
     width: 80%;
 }
 
+a {
+    color: #bb0404;
+}
+
+a:hover {
+    color: orangered;
+}
+
 /*ul container for fetchData-function in main.js*/
 .country-box {
     list-style: none;
