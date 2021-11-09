@@ -29,7 +29,15 @@ h1 {
 }
 
 a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
     color: #bb0404;
+
 }
 
 a:hover {
