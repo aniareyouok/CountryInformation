@@ -2,10 +2,10 @@
   "name": "frontend-javascript-country-information-world-regions",
   "version": "1.0.0",
   "description": "Je vrienden hebben er inmiddels lucht van gekregen dat je kunt programmeren en sindsdien wordt je low key gestalkt met\r verzoekjes om webapplicaties te bouwen. Je vriend Constantijn wil heel graag dat je een applicatie voor hem maakt die\r feitjes over landen kan ophalen, zodat hij cool kan doen met zijn wereldse kennis op borrels en verjaardagen.",
-  "main": "src/index/app.js",
+  "main": "src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index/index.html",
+    "start": "parcel src/index.html",
     "build": "parcel build index.html"
   },
   "author": "",
