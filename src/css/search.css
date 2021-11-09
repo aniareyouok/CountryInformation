@@ -10,11 +10,12 @@ body {
 h1 {
     font-family: "Franklin Gothic Book", serif;
     font-weight: bold;
-    color: orangered;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 30px;
 }
 
 .earth {
@@ -31,20 +32,25 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 30px;
 }
 
 .search input {
-    border-color: #62c162;
+    border: 1px solid #a6d160;
     border-radius: 4px 0 0 4px;
+    padding: 5px;
+}
 
-
+.search input:focus {
+    outline: none;
 }
 
 .search button {
-    border-color: #62c162;
+    border: 1px solid #a6d160;
     border-radius: 0 4px 4px 0;
-    background-color: #62c162;
+    background-color: #a6d160;
     font-weight: bold;
+    padding: 5px;
 
 }
 
