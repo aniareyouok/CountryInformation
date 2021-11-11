@@ -44,7 +44,7 @@ async function fetchData() {
             return document.getElementById("country-box").appendChild(listItem);
 
         });
-        return countryList
+        // return countryList
     } catch (e) {
         console.error(e);
     }
