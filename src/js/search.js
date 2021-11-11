@@ -14,10 +14,12 @@ async function test() {
 
     test();
 
+    //getInput functie levert country name op
+
 //Retrieves flag, name, subregion, population and capital and invokes the getCurrency and getLanguage function
-async function fetchCountry() {
+async function fetchCountry(name) {
     try {
-        const result = await axios.get('https://restcountries.com/v2/name/belgie');
+        const result = await axios.get(`https://restcountries.com/v2/name/${name}`);
         const flag = `<img src="${result.data[0].flag}" alt="Flag of ${result.data[0].name}">`
         const country_name = result.data[0].name;
         const subarea_name = result.data[0].subregion;
@@ -27,10 +29,10 @@ async function fetchCountry() {
         const currency = getCurrency(currencies);
 
         let outcome = `<div class="flag_name">
-        ${flag} <h1>${country_name}</h1></div> <br>
-        <div class="text"><p>${country_name} is situated in ${subarea_name}. <br>
-        It has a population of ${amount} people. <br>
-        The capital is ${city} and ${currency} <br>
+        ${flag} <h2>${country_name}</h2></div> 
+        <div class="text"><p>${country_name} is situated in ${subarea_name}. 
+        It has a population of ${amount} people. 
+        The capital is ${city} and ${currency}
         </p></div>`
 
         document.getElementById("outcome_search").innerHTML = outcome;
@@ -39,7 +41,7 @@ async function fetchCountry() {
     console.error(error);
 }}
 
-fetchCountry();
+fetchCountry("peru");
 
 // ${getLanguage}
 
