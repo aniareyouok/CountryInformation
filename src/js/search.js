@@ -29,13 +29,13 @@ async function fetchCountry(name) {
         const languages = result.data[0].languages;
         const language = getLanguage(languages);
 
-        let outcome = `<div class="flag_name">
+        let outcome = `<div class="country_container"><div class="flag_name">
         ${flag} <h2>${country_name}</h2></div> 
         <div class="text"><p>${country_name} is situated in ${subarea_name}. 
         It has a population of ${amount} people. 
         The capital is ${city} and ${currency}. <br>
         ${language}
-        </p></div>`
+        </p></div></div>`
 
         document.getElementById("outcome_search").innerHTML = outcome;
 

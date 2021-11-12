@@ -1,3 +1,6 @@
+/*I got this idea from Mark Rensen!*/
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
 /*by using border-box, the padding is included in the width*/
 * {
     box-sizing: border-box;
@@ -10,34 +13,27 @@ body {
 .wrapper{
     width: 30%;
     margin: auto;
+    text-align: center;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 h1 {
     font-family: "Gochi Hand", cursive;
     font-weight: bold;
-    text-align: center;
     color: black;
-    padding: 30px;
-
+    padding: 10px;
 }
 
 .earth {
     width: 70%;
     margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 .search {
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 30px;
+    align-content: center;
 }
 
 .search input {
@@ -58,7 +54,16 @@ h1 {
     padding: 5px;
 }
 
-.outcome {
+.search button:hover {
+    background-color: #87a850;
+}
+
+.search button:active {
+    background-color: #a6d160;
+    transform: translateY(1px);
+}
+
+.country_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,6 +76,7 @@ h1 {
     width: auto;
     margin: 10px;
     padding: 10px;
+    text-align: left;
 }
 
 .flag_name {
