@@ -1,10 +1,10 @@
 import axios from "axios";
 
-//clicking the search button invokes getInput function
+//clicking the search button or enter invokes getInput function
 document.getElementById("search_button").addEventListener("click", getInput);
 document.addEventListener('keypress',function(e){
     if (e.key === "Enter") {
-        getInput;
+        getInput();
     }
 });
 
@@ -15,7 +15,8 @@ function getInput() {
     return fetchCountry(input);
 }
 
-//Retrieves flag, name, subregion, population and capital and invokes the getCurrency and getLanguage function
+//Retrieves flag, name, subregion, population, capital and also a currency array and language array
+//and invokes the getCurrency and getLanguage function
 async function fetchCountry(name) {
     try {
         const result = await axios.get(`https://restcountries.com/v2/name/${name}`);
@@ -38,6 +39,7 @@ async function fetchCountry(name) {
         </p></div></div>`
 
         document.getElementById("outcome_search").innerHTML = outcome;
+        document.getElementById('search_field').value = "";
 
     } catch (error) {
     console.error(error);
