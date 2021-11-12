@@ -53,13 +53,16 @@ async function fetchCountry(name) {
         //emptying search input field
         document.getElementById('search_field').value = "";
 
-        //error message uses same class names as search outcome
     } catch (error) {
+        //error message uses same class names as search outcome
         const errorMessage = `<div class="country_container"><div class="flag_name">
         <i>:(</i><h2>Error</h2></div> 
         <div class="text"><p>We couldn't find this country, please check your spelling. This API is very precise.
         </p></div></div>`
+        //placing error message in search.html
         document.getElementById("outcome_search").innerHTML = errorMessage;
+        //emptying search input field
+        document.getElementById('search_field').value = "";
     console.error(error);
 }}
 
