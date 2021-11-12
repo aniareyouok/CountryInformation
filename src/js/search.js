@@ -1,20 +1,14 @@
 import axios from "axios";
 
-//check the array in the console
-async function test() {
-    try {
-        const result = await axios.get('https://restcountries.com/v2/name/cuba');
-        console.log(result);
-        console.log(result.data[0].flag + " " + result.data[0].name + " " + result.data[0].subregion + " " + result.data[0].population + " " + result.data[0].capital);
-        console.log(result.data[0].currencies)
-        console.log(result.data[0].languages[0].name + " and " + result.data[0].languages[1].name + " and " + result.data[0].languages[2].name)
-    } catch  (error) {
-        console.error(error);
-    }}
+//clicking the search button invokes getInput function
+document.getElementById("search_button").addEventListener("click", getInput);
 
-    test();
-
-//getInput functie levert country name op
+//getInput retrieves name from search field and invokes the fetchCountry function
+function getInput() {
+    let input = document.getElementById('search_field').value
+    input=input.toLowerCase();
+    return fetchCountry(input);
+}
 
 //Retrieves flag, name, subregion, population and capital and invokes the getCurrency and getLanguage function
 async function fetchCountry(name) {
@@ -43,8 +37,6 @@ async function fetchCountry(name) {
     } catch (error) {
     console.error(error);
 }}
-
-fetchCountry("cuba");
 
 //Retrieves the kind of currencies you can pay with in a given country. This function gets evoked by the fetchData function.
 function getCurrency(currencies) {
