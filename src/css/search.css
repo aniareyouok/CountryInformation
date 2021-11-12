@@ -11,7 +11,8 @@ body {
 }
 
 .wrapper{
-    width: 30%;
+    width: 451px;
+    max-width: 100%;
     margin: auto;
     text-align: center;
 }
@@ -89,10 +90,21 @@ h1 {
 }
 
 .flag_name img {
+    box-shadow: 2px 2px silver;
     width: auto;
     height: 40px;
     margin: 5px;
     padding: 0;
+}
+
+.flag_name i {
+    font-family: "Gochi Hand", cursive;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    margin: 5px;
+    padding: 5px;
+
 }
 
 .flag_name h2 {

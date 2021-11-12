@@ -42,6 +42,11 @@ async function fetchCountry(name) {
         document.getElementById('search_field').value = "";
 
     } catch (error) {
+        const errorMessage = `<div class="country_container"><div class="flag_name">
+        <i>:(</i><h2>Error</h2></div> 
+        <div class="text"><p>We couldn't find this country, please check your spelling. This API is very precise.
+        </p></div></div>`
+        document.getElementById("outcome_search").innerHTML = errorMessage;
     console.error(error);
 }}
 
