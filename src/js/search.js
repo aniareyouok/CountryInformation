@@ -19,17 +19,27 @@ function getInput() {
 //and invokes the getCurrency and getLanguage function
 async function fetchCountry(name) {
     try {
+        // retrieving country array
         const result = await axios.get(`https://restcountries.com/v2/name/${name}`);
+
+        // creating variables for specifiek information in the country array
         const flag = `<img src="${result.data[0].flag}" alt="Flag of ${result.data[0].name}">`
         const country_name = result.data[0].name;
         const subarea_name = result.data[0].subregion;
         const amount = result.data[0].population;
         const city = result.data[0].capital;
+
+        // creating a currencies array and providing this as an argument for the getCurrency function
         const currencies = result.data[0].currencies;
         const currency = getCurrency(currencies);
+
+        // creating a language array and providing this as an argument for the getLanguage function
         const languages = result.data[0].languages;
         const language = getLanguage(languages);
 
+        // variabel with the search outcome as a template literal string
+        // the way we want it in our html
+        // invoking getCurrency and getLanguage function
         let outcome = `<div class="country_container"><div class="flag_name">
         ${flag} <h2>${country_name}</h2></div> 
         <div class="text"><p>${country_name} is situated in ${subarea_name}. 
@@ -38,9 +48,12 @@ async function fetchCountry(name) {
         ${language}
         </p></div></div>`
 
+        //placing outcome in search.html
         document.getElementById("outcome_search").innerHTML = outcome;
+        //emptying search input field
         document.getElementById('search_field').value = "";
 
+        //error message uses same class names as search outcome
     } catch (error) {
         const errorMessage = `<div class="country_container"><div class="flag_name">
         <i>:(</i><h2>Error</h2></div> 
@@ -50,7 +63,8 @@ async function fetchCountry(name) {
     console.error(error);
 }}
 
-//Retrieves the kind of currencies you can pay with in a given country. This function gets evoked by the fetchData function.
+//Retrieves the kind of currencies you can pay with in a given country.
+// This function receives it's currencies array from, and is invoked, by the fetchData function.
 function getCurrency(currencies) {
     try {
         let allCurrenciesArray = [];
@@ -73,7 +87,8 @@ function getCurrency(currencies) {
     }
 }
 
-//Retrieves languages
+//Retrieves languages that are spoken in a given country.
+// Receives its languages array (argument) from, and is invoked, by the fetchCountry function
 function getLanguage(languages) {
     try {
         let allLanguagesArray = [];
