@@ -2,6 +2,11 @@ import axios from "axios";
 
 //clicking the search button invokes getInput function
 document.getElementById("search_button").addEventListener("click", getInput);
+document.addEventListener('keypress',function(e){
+    if (e.key === "Enter") {
+        getInput;
+    }
+});
 
 //getInput retrieves name from search field and invokes the fetchCountry function
 function getInput() {
@@ -65,7 +70,6 @@ function getCurrency(currencies) {
 function getLanguage(languages) {
     try {
         let allLanguagesArray = [];
-        console.log(allLanguagesArray);
 
         for (let i = 0; i < languages.length; i++) {
             allLanguagesArray.push(languages[i].name);
@@ -84,5 +88,3 @@ function getLanguage(languages) {
         console.error(error);
     }
 }
-
-// data[0].languages[i].name;
